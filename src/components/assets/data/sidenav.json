@@ -1,0 +1,39 @@
+[
+  {
+    "display_name": "Dashboard",
+    "route": "/",
+    "Icon": "<Icon name='Dashboard' width='70' height='70' />"
+  },
+  {
+    "display_name": "Inventory",
+    "route": "/inventory",
+    "Icon": "<Icon name='Invetroy' width='70' height='70' />"
+  },
+  {
+    "display_name": "Categories",
+    "route": "/categories",
+    "Icon": "<Icon name='Invetroy' width='70' height='70' />"
+  },
+  
+  {
+    "display_name": "Analytics",
+    "route": "/analytics",
+    "Icon": "<Icon name='Ana' width='70' height='70' /> "
+  },
+  
+  {
+    "display_name": "Reports",
+    "route": "/reports",
+    "Icon": "<Icon name='Reports' width='70' height='70' />"
+  },
+  {
+    "display_name": "Notification",
+    "route": "/notification",
+    "Icon": "<Icon name='Noti' width='70' height='70' />"
+  },
+  {
+    "display_name": "Log Out",
+    "route": "/logout",
+    "Icon": " <Icon name='Signout' width='70' height='70' /> "
+  }
+]
