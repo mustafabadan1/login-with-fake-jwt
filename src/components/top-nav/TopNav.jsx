@@ -1,10 +1,18 @@
 import React from 'react';
-import styles from './TopNav.module.css'
+import { Icon } from '../icon';
+import { Link } from 'react-router-dom';
+import styles from '../top-nav/TopNav.module.css'
+
 
 const TopNav = () => {
-  return <div>
-  <h2 className=  " text-red-200">Topnav</h2>
-  </div>;
+  return (
+    <>
+      <div className='Navbar'>
+        <Link to='#' className={styles.color}>fsdfsd
+        </Link>
+      </div>
+    </>
+  );
 };
 
 export default TopNav;

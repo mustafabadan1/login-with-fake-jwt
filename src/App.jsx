@@ -1,13 +1,19 @@
-import { useState } from 'react';
+import React from 'react';
+import TopNav from './components/top-nav/TopNav';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideNav from './components/side-nav/SideNav';
 
 function App() {
   return (
-    <div>
-      <SideNav />
-      <div className=' bg-red-900'></div>
-      
-    </div>
+    <>
+        <Router>
+          <TopNav />
+          <SideNav />
+          <Routes>
+            <Route path='/' />
+          </Routes>
+        </Router>
+    </>
   );
 }
 
