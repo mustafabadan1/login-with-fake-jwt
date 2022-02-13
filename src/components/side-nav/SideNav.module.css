@@ -1,0 +1,130 @@
+:root {
+  --color_nav_bg: rgb(30, 41, 59);
+  --color_nav_txt: rgb(100, 116, 139);
+  --color_nav_ctg: rgb(226, 232, 240);
+  --color_nav_active: rgb(85, 79, 232);
+  --color_nav_not_active: rgb(61, 74, 94);
+  --color_nav_active_bg: rgb(15, 23, 42);
+  --nav-width: 16rem;
+
+  --margin-xl: 4rem;
+  --margin-lg: 3rem;
+  --margin-md: 2rem;
+  --margin-sm: 1rem;
+  --margin-xs: 0.8rem;
+  --margin-xxs: 0.5rem;
+  --padding-xl: 4rem;
+  --padding-lg: 3rem;
+  --padding-md: 2rem;
+  --padding-sm: 1rem;
+  --padding-xs: 0.8rem;
+  --padding-xxs: 0.5rem;
+}
+
+.navbar_container {
+  background: var(--color_nav_bg);
+  height: 100vh;
+  width: var(--nav-width);
+
+  padding: var(--padding-md) var(--padding-sm);
+  transition: transform 300ms ease-in-out;
+}
+
+nav {
+  position: relative;
+  width: 16rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /* hide navbar */
+
+  --ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: width linear 0.3s;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  padding: 0 0.35rem;
+  font-size: 2.2rem;
+  display: flex;
+}
+.logo {
+  padding: 0 0.35rem;
+  font-size: 2.2rem;
+  display: flex;
+}
+
+.logo_icon {
+  color: var(--color_nav_active);
+}
+
+
+/* Query */
+@media screen and (max-width: 1024px) {
+  .logo_icon {
+    display: none;
+  }
+
+
+}
+
+
+.menu_container{
+                margin-top: var(--margin-lg);
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+}
+
+/* .second_category {
+  margin-top: 3rem;
+} */
+
+
+.li_navlink a {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  color: var(--color_nav_ctg);
+  transition: all ease-in-out 0.2s;
+}
+
+.description {
+  margin-left: 0.5rem;
+  font-weight: 400;
+  transition: opacity 200ms ease;
+}
+
+
+.li_navlink a:hover {
+  background: var(--color_nav_active_bg);
+}
+
+
+.li_navlink svg {
+  font-size: 1.5rem !important;
+  color: var(--color_nav_not_active) !important;
+  flex-shrink: 0 !important;
+}
+
+.li_navlink svg :hover{
+  color: var(--color_nav_active);
+}
+
+.li_navlink .active {
+  background: var(--color_nav_active_bg);
+  
+}
+
+  svg {
+      color: var(--color_nav_active);
+  }

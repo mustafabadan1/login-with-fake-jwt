@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <Router>
-          <TopNav />
+          {/* <TopNav /> */}
           <SideNav />
           <Routes>
             <Route path='/' />
