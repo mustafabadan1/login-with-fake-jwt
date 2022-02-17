@@ -11,6 +11,7 @@ import { Suppliers } from './Suppliers';
 import { NavMenuIcon } from './NavMenuIcon';
 import { CloseIcon } from './CloseIcon';
 import { Categories } from './Categories';
+import { UsersIcon } from './UsersIcon';
 
 
 
@@ -48,6 +49,10 @@ const Icon = (props) => {
         
       case 'Categories':
         return <Categories {...props} />;
+
+
+      case 'UsersIcon':
+        return <UsersIcon {...props} />;
       
     default:
       return <div />;

@@ -5,39 +5,40 @@ export const DataSideNav = [
   {
     display_name: 'Dashboard',
     route: '/',
-    Icon: <Icon name='DashboardIcon' width="24" />,
+    Icon: <Icon name='DashboardIcon'  />,
   },
 
   {
     display_name: 'Analytics',
     route: '/analytics',
-    Icon: <Icon name='Ana'width="24"  />,
+    Icon: <Icon name='Ana' />,
   },
   {
     display_name: 'Inventory',
     route: '/inventory',
-    Icon: <Icon name='Invetroy' width="24" />,
+    Icon: <Icon name='Invetroy' />,
   },
   {
     display_name: 'Categories',
     route: '/categories',
-    Icon: <Icon name='Categories'width="24"  />,
+    Icon: <Icon name='Categories' />,
   },
 
   {
     display_name: 'Reports',
     route: '/reports',
-    Icon: <Icon name='Reports' width="24" />,
+    Icon: <Icon name='Reports' />,
   },
+
   {
-    display_name: 'Notification',
-    route: '/notification',
-    Icon: <Icon name='Noti' width="24" />,
+    display_name: 'Users',
+    route: '/users',
+    Icon: <Icon name='UsersIcon' width='22'height='20' />,
   },
   {
     display_name: 'Suppliers',
     route: '/suppliers',
-    Icon: <Icon name='Suppliers'width="24"  />,
+    Icon: <Icon name='Suppliers' />,
   },
 
   // {
