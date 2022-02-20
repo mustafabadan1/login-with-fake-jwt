@@ -3,56 +3,58 @@ import { Link } from 'react-router-dom';
 import img from '../assets/images/logo.svg';
 import { Icon } from '../icon';
 import { DataSideNav } from '../assets/data/DataSideNav';
-// import styles from '../side-nav/SideNav.module.css';
+import styles from '../side-nav/SideNav.module.css';
 import { NavLink } from 'react-router-dom';
 
 function SideNav() {
   return (
     <div className='flex h-screen'>
-      <div className=' h-screen flex'>
-        {/* side container */}
-        <div className=' w-64 py-8 px-5 bg-gray-100 drop-shadow		border-r border-gray-200 border-outline border-b-2  '>
+      {/* side container */}
+      <div className=' w-64 h-full  py-4 px-8 bg-neutral-50 border-r  '>
+
         {/* Logo */}
-
-          <div className=" inline-flex w-full border-b-2 border-gray-200  ">  <Icon name='DashboardIcon' className='w-9 h-9 fill-black  ml-1' />
-          <h3 className='-ml-2 uppercase text-base font-bold text-blue-500'>Storek</h3>
-          </div>
-
-          {/* nav */}
-          <nav className='mt-5 '>
-        
-            <h2 className='ml-3 -mb-3 uppercase font-semibold text-sm opacity-40'>Issues</h2>
-
-
-              <div className='ellement container p'>
-
-             
-            {DataSideNav.map((item, index) => {
-                return (
-                  <Link
-                  to={item.route} key={index}
-                  className=' flex px-3 my-2 text-lg font-medium   justify-between text-gray-900  rounded-lg'
-                >
-                 <span className=' inline-flex items-center'>
-               <span className=' w-5 h-5 fill-gray-600 mr-2 opacity-75'>{item.Icon}</span>  
-    
-                  <span className=' ml-2 py-2 text-gray-900 '>{item.display_name}</span>
-                </span>
-    
-                {/* <span className=' inline-block px-3 py-1 leading-none text-xs font-semibold text-gray-700 bg-gray-300 rounded-2xl'>5</span> */}
-                </Link>
-                );
-              })}
-             </div>
-          </nav>
+        <div className=' inline-flex w-full mt-5  border-b-2 border-neutral-100 tracking-widest	 '>
+          {' '}
+          <Icon name='DashboardIcon' className='w-9 h-9 fill-blue-600 ml-1' />
+          <h3 className='-ml-2 uppercase text-base font-bold text-blue-500'>
+            Storek
+          </h3>
         </div>
+
+        {/* nav */}
+        <nav className='mt-16 '>
+          <h2 className='ml-3 -mb-3 uppercase font-semibold text-sm opacity-30'>
+            Issues
+          </h2>
+
+          <div className='ellement containerp'>
+            {DataSideNav.map((item, index) => {
+              return (
+                <NavLink activeClassName =''
+                  to={item.route}
+                  key={index}
+                  className=' flex px-3 my-2 text-lg font-medium   justify-between text-stone-900   rounded-lg'
+                >
+                  <span className=' inline-flex items-center'>
+                    <span className=' w-5 h-5 my-2  fill-gray-600 mr-2 opacity-75'>
+                      {item.Icon}
+                    </span>
+
+                    <span className=' ml-2 my-2 text-gray-900 '>
+                      {item.display_name}
+                    </span>
+                  </span>
+
+                  {/* <span className=' inline-block px-3 py-1 leading-none text-xs font-semibold text-gray-700 bg-gray-300 rounded-2xl'>5</span> */}
+                </NavLink>
+              );
+            })}
+          </div>
+        </nav>
       </div>
     </div>
   );
 }
-
-
-
 
 export default SideNav;
 
@@ -63,19 +65,19 @@ export default SideNav;
 //         <div className='Sidebarcontent'>
 //           <nav className='sidebarnav'>
 //             <ul className=' flex flex-col gap-y-6 pt-20'>
-              // {DataSideNav.map((item, index) => {
-              //   return (
-              //     // link
-              //     <>
-              //       <li className='sidebarnav_item    bg-red-200'>
-              //         <Link to={item.route} key={index}>
-              //           {item.display_name}
-              //           {item.Icon}
-              //         </Link>
-              //       </li>
-              //     </>
-              //   );
-              // })}
+// {DataSideNav.map((item, index) => {
+//   return (
+//     // link
+//     <>
+//       <li className='sidebarnav_item    bg-red-200'>
+//         <Link to={item.route} key={index}>
+//           {item.display_name}
+//           {item.Icon}
+//         </Link>
+//       </li>
+//     </>
+//   );
+// })}
 //             </ul>
 //           </nav>
 //           {/* map */}
@@ -160,16 +162,16 @@ export default SideNav;
 //             to='/'
 //             className=' flex items-center  justify-between text-md font-medium'
 //           >
-            // <span className=' inline-flex'>
-            //   <Icon
-            //     name='DashboardIcon'
-            //     className=' fill-gray-600 h-4 text-gray-700  '
-            //   />
+// <span className=' inline-flex'>
+//   <Icon
+//     name='DashboardIcon'
+//     className=' fill-gray-600 h-4 text-gray-700  '
+//   />
 
-            //   <span className=' ml-2 text-gray-900'>Dashboard</span>
-            // </span>
+//   <span className=' ml-2 text-gray-900'>Dashboard</span>
+// </span>
 
-            // <span className=' inline-block px-3 py-1 leading-none text-xs font-semibold text-gray-700 bg-gray-300 rounded-full'>5</span>
+// <span className=' inline-block px-3 py-1 leading-none text-xs font-semibold text-gray-700 bg-gray-300 rounded-full'>5</span>
 //           </Link>
 //         </nav>
 //       </div>

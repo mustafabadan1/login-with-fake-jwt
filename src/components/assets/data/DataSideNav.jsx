@@ -33,7 +33,7 @@ export const DataSideNav = [
   {
     display_name: 'Users',
     route: '/users',
-    Icon: <Icon name='UsersIcon' width='22'height='20' />,
+    Icon: <Icon name='UsersIcon' />,
   },
   {
     display_name: 'Suppliers',
