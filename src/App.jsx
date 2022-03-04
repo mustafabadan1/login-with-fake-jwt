@@ -1,22 +1,21 @@
 import React from 'react';
-import TopNav from './components/top-nav/TopNav';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideNav from './components/side-nav/SideNav';
-import LogIn from './components/Login/LogIn';
+import HomePage from './components/HomePage';
+import FormLogin from './components/Login/FormLogin';
+import Header from './components/top-nav/Header';
 
 function App() {
   return (
     <>
-        <Router>
-          {/* <TopNav /> */}
-      <LogIn/>
-          {/* <SideNav /> */}
-          <Routes>
-            <Route path='/' />
-          
-
-          </Routes>
-        </Router>
+      <Router>
+         <Header />
+          <Switch>
+            <Route exact component={HomePage } path='/' />
+            <Route component={FormLogin } path='/formLogin' />
+          </Switch>
+     
+      </Router>
     </>
   );
 }
