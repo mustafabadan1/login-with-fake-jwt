@@ -2,20 +2,24 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideNav from './components/side-nav/SideNav';
 import HomePage from './components/HomePage';
-import FormLogin from './components/Login/FormLogin';
+
 import Header from './components/top-nav/Header';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <>
+  
       <Router>
-         <Header />
-          <Switch>
-            <Route exact component={HomePage } path='/' />
-            <Route component={FormLogin } path='/formLogin' />
-          </Switch>
-     
+        
+        <Switch>
+          <Route path='/login' component={Login} />
+          <Route path='/' component={SideNav} />
+
+
+        </Switch>
       </Router>
+
     </>
   );
 }
