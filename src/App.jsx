@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideNav from './components/side-nav/SideNav';
-import HomePage from './components/HomePage';
+import Home from './components/Home';
 
 import Header from './components/top-nav/Header';
 import Login from './components/Login/Login';
@@ -11,11 +11,13 @@ function App() {
     <>
   
       <Router>
-        
+        <SideNav/>
         <Switch>
+          
+          <Route path='/Home' component={Home} />
           <Route path='/login' component={Login} />
-          <Route path='/' component={SideNav} />
-
+          
+<Home/>
 
         </Switch>
       </Router>
