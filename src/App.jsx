@@ -9,9 +9,9 @@ import Login from './components/Login/Login';
 function App() {
   return (
     <>
-  
+    
       <Router>
-        <SideNav/>
+      
         <Switch>
           
           <Route path='/Home' component={Home} />
