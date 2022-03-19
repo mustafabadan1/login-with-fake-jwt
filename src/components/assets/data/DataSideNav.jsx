@@ -1,8 +1,10 @@
 import react from 'react';
-import { Icon } from '../../icon';
+import { Icon } from '../icon';
+
 
 export const DataSideNav = [
   {
+    
     display_name: 'Dashboard',
     route: '/',
     Icon: <Icon name='DashboardIcon'  />,

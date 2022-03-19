@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../assets/images/logo.svg';
-import { Icon } from '../icon';
-import { DataSideNav } from '../assets/data/DataSideNav';
-import styles from '../side-nav/SideNav.module.css';
+
+
+import { DataSideNav } from '../../../assets/data/DataSideNav';
 import { NavLink } from 'react-router-dom';
+import { Icon } from '../../../assets/icon';
 
 function SideNav() {
   return (
+    
     <div className='flex h-screen'>
       {/* side container */}
       <div className=' w-64 h-full  py-4 px-8 bg-neutral-50 border-r  '>
