@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const isLoginTrue = JSON.parse(localStorage.getItem("login"));
+  const isLoginTrue = JSON.parse(localStorage.getItem('login'));
 
   const userNotLogin = () => (
     <>
