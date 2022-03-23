@@ -1,76 +1,57 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const NavLogin = () => {
+import React from 'react';
 
-  const [navbarOpen, setNavbarOpen] = useState(false);
+const NavLogin = () => {
   return (
-    <div>
-      <section className='bg-white :bg-gray-800'>
-        <nav className='container p-6 mx-auto lg:flex lg:justify-between lg:items-center flex flex-wrap items-center'>
+    <>
+      <section className='bg-white justify-center max-h-full sticky'>
+        <nav className=' p-6  lg:flex lg:justify-between align-middle lg:items-center '>
           <div className='flex items-center justify-between'>
             <div>
-              <Link
+              <a
                 className='text-2xl font-bold text-gray-800 :text-white lg:text-3xl hover:text-gray-700 :hover:text-gray-300'
                 href='#'
               >
                 Brand
-              </Link>
-            </div>
-
-            {/*  Mobile menu button */}
-            <div className='flex lg:hidden'>
-              <button
-                type='button'
-                className='text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-                aria-label='toggle menu'
-
-                
-              >
-                <svg viewBox='0 0 24 24' className='w-6 h-6 fill-current'>
-                  <path
-                    fill-rule='evenodd'
-                    d='M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z'
-                  ></path>
-                </svg>
-              </button>
+              </a>
             </div>
           </div>
 
           {/*  Mobile Menu open: "block", Menu closed: "hidden"  */}
-          <div className='flex flex-col mt-4 space-y-2 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0'>
-            <Link
-              className='mx-8 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400 hover:text-blue-500'
-              to='/'
+          <div className='  block lg:my-0 my-4  space-y-2 lg:text-lg align-middle justify-center md:text-base text-center lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0'>
+            <a
+              className='mx-6 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400  focus:text-blue-500 border-b-2 border-transparent focus:border-blue-500'
+              href='#'
             >
               Home
-            </Link>
-            <Link
-              className='mx-8 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400 hover:text-blue-500'
-              to='/'
+            </a>
+            <a
+              className='mx-6 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400 focus:text-blue-500 border-b-2 border-transparent focus:border-blue-500'
+              href='#'
             >
               Components
-            </Link>
-            <Link
-              className='mx-8 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400 hover:text-blue-500'
-              to='/'
-            >
-              Pricing
-            </Link>
-            <Link
-              className='mx-8 text-gray-700 transition-colors duration-200 transform :text-gray-200 :hover:text-blue-400 hover:text-blue-500'
-              to='/'
-            >
-              Contact
-            </Link>
+            </a>
           </div>
 
-          <Link
-            className='block px-5 py-2 mt-4 font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg lg:mt-0 hover:bg-blue-500 lg:w-auto'
-            to='/'
-          >
-            Get started
-          </Link>
+          <a className='flex items-center justify-center align-middle  tracking-wide bg-transparent  text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent  transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className='h-5 w-5'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              stroke-width='2'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z'
+              />
+            </svg>
+            <span class='mx-1'>LogIn</span>
+          </a>
         </nav>
 
         <div className='container px-6 py-16 mx-auto text-center'>
@@ -95,72 +76,8 @@ const NavLogin = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
 export default NavLogin;
-
-
-
-// export default function Navbar({ fixed }) {
-//                 const [navbarOpen, setNavbarOpen] = useState(false);
-//                 return (
-//                   <>
-//                     <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-pink-500 mb-3">
-//                       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-//                         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-//                           <a
-//                             className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-//                             href="#pablo"
-//                           >
-//                             pink Tailwind Starter Kit
-//                           </a>
-//                           <button
-//                             className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-//                             type="button"
-//                             onClick={() => setNavbarOpen(!navbarOpen)}
-//                           >
-//                             <i className="fas fa-bars"></i>
-//                           </button>
-//                         </div>
-//                         <div
-//                           className={
-//                             "lg:flex flex-grow items-center" +
-//                             (navbarOpen ? " flex" : " hidden")
-//                           }
-//                           id="example-navbar-danger"
-//                         >
-//                           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-//                             <li className="nav-item">
-//                               <a
-//                                 className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-//                                 href="#pablo"
-//                               >
-//                                 <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Share</span>
-//                               </a>
-//                             </li>
-//                             <li className="nav-item">
-//                               <a
-//                                 className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-//                                 href="#pablo"
-//                               >
-//                                 <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Tweet</span>
-//                               </a>
-//                             </li>
-//                             <li className="nav-item">
-//                               <a
-//                                 className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-//                                 href="#pablo"
-//                               >
-//                                 <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Pin</span>
-//                               </a>
-//                             </li>
-//                           </ul>
-//                         </div>
-//                       </div>
-//                     </nav>
-//                   </>
-//                 );
-//               }
-              

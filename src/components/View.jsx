@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LoginPage } from './Login/LoginPage';
-import LP from './Login/LoginPagetwo';
+// import Page, { LoginPage } from './Login/LoginPage';
+import Page from './Login/LoginPage';
 
 import Dashboard from './pages/dashboard/Dashboard';
 
-const Home = () => {
+const View = () => {
   const isLoginTrue = JSON.parse(localStorage.getItem('login'));
 
   const userNotLogin = () => (
@@ -14,7 +14,7 @@ const Home = () => {
       <h3>
         If you have an account, then please <Link to='/Login'>Login</Link>
       </h3> */}
-      <LP />
+      <Page/>
     </>
   );
   return (
@@ -32,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default View;

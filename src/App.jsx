@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
+import View from './components/View';
 import Login from './components/Login/Login';
 
 
@@ -12,10 +12,10 @@ function App() {
   {/* <Dashboard/> */}
         <Switch>
           
-          <Route path='/Home' component={Home} />
+          <Route path='/View' component={View} />
           <Route path='/login' component={Login} />
           
-<Home/>
+<View/>
 
         </Switch>
       

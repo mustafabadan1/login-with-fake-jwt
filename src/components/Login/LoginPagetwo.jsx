@@ -8,14 +8,14 @@ import {
 import { DataFormPage } from '../assets/data/DataLogin';
 
 import { Link } from 'react-router-dom';
-import NavLogin from './NavLogin';
+import Nav from './NavLogin';
 
 export default function LP() {
   return (
-    <div className='container'>
+    <>
 
     {/* navbar */}
-<NavLogin/>
+<Nav/>
    {/* endnavbar */}
 
 
@@ -98,6 +98,6 @@ export default function LP() {
         </div>
       </section>
        {/* End section */}
-    </div>
+    </>
   );
 }

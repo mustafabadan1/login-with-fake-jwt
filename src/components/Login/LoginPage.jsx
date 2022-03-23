@@ -1,115 +1,263 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import FormLogin from './Login';
 
-export const LoginPage = () => {
+function Page() {
+  const [show, setShow] = useState(false);
   return (
-    // navbar
-    <div className=''>
-      <nav className='bg-white border-gray-600 px-4 sm:px-4 py-2.5  border-b shadow-md shadow-slate-400   dark:bg-gray-800'>
-        <div className='container flex flex-wrap justify-between items-center mx-auto'>
-          <a href='#' className='flex'>
-            <svg
-              className='mr-3 h-10'
-              viewBox='0 0 52 72'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                d='M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z'
-                fill='#76A9FA'
-              />
-              <path
-                d='M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z'
-                fill='#A4CAFE'
-              />
-              <path
-                d='M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z'
-                fill='#1C64F2'
-              />
-            </svg>
-            <span className='self-center text-lg font-semibold whitespace-nowrap dark:text-white'>
-              Storek Inventory
-            </span>
-          </a>
-          <div className='flex md:order-2'>
-            <Link
-              to='/Login'
-              className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-            >
-              <button>Get Started</button>
-            </Link>
+    <>
+      <div className=' pb-12 overflow-y-hidden' style={{ minHeight: 700 }}>
+          {/* header & Home */}
+        <div className='bg-gray-50 '>
 
-            {/* <Link className='' to='/Login'><button>loginbitch</button></Link> */}
+          <nav className='w-full border-b'>
+            <div className='py-5 md:py-0 container mx-auto px-6 flex items-center justify-between'>
+              <div>
+                <Link
+                  className='text-2xl font-bold text-gray-800 :text-white lg:text-3xl hover:text-gray-700 :hover:text-gray-300'
+                  to='#'
+                >
+                  Brand
+                </Link>
+              </div>
+              <div>
+                <button
+                  onClick={() => setShow(!show)}
+                  className={`${
+                    show ? 'hidden' : ''
+                  } sm:block md:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500`}
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                    stroke-width='2'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M4 8h16M4 16h16'
+                    />
+                  </svg>
+                </button>
+                <div
+                  id='menu'
+                  className={` ${show ? '' : 'hidden'} md:block lg:block `}
+                >
+                  <button
+                    onClick={() => setShow(!show)}
+                    className={`block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 fixed focus:outline-none focus:ring-2 focus:ring-gray-500 z-30 top-0 mt-6`}
+                  >
+                    <span className='  text-blue-400'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-6 w-6'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        stroke-width='2'
+                      >
+                        <path
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          d='M6 18L18 6M6 6l12 12'
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul className='flex text-3xl md:text-base items-center py-10 md:flex flex-col md:flex-row justify-center fixed md:relative top-0 bottom-0 left-0 right-0 bg-white md:bg-transparent z-20'>
+                    <li className='text-gray-700 hover:text-blue-500 hover:border-blue-400 border-transparent border-b-2   cursor-pointer text-base lg:text-lg pt-10 md:pt-0 select-none '>
+                      <Link to='/'>Home</Link>
+                    </li>
+                    <li className='text-gray-700 hover:text-blue-500 hover:border-blue-400 border-transparent border-b-2   cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10 select-none'>
+                      <Link to='/'>Features</Link>
+                    </li>
+                    <li className='text-gray-700 hover:text-blue-500 hover:border-blue-400 border-transparent border-b-2   cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10 select-none'>
+                      <Link to='/'>Company</Link>
+                    </li>
+
+                    <li className='text-gray-700 hover:text-blue-500 hover:border-blue-400 border-transparent border-b-2   cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10 select-none'>
+                      <Link to='/'>Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button className='focus:outline-none lg:text-lg lg:font-bold focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hidden md:block bg-transparent transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-blue-500 text-blue-500 px-4 sm:px-8 py-1 sm:py-3 text-sm select-none'>
+                Sign In
+              </button>
+            </div>
+          </nav>
+          <div className='bg-gray-50'>
+            <div className='container mx-auto flex flex-col items-center py-12 sm:py-24'>
+              <div className='w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10'>
+                <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black leading-7 md:leading-10'>
+                  The Freedom to Create the
+                  <span className='text-blue-500'>Websites</span>
+                  You Want
+                </h1>
+                <p className='mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg'>
+                  A professional website drives sales. Create Link beautiful
+                  website to impress and engage new customers and establish your
+                  business online{' '}
+                </p>
+              </div>
+              <div className='flex justify-center items-center'>
+                <button className='focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-indigo-700 py-2 sm:py-4 text-sm'>
+                  Get Started
+                </button>
+                <button className='ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-transparent transition duration-150 ease-in-out hover:border-indigo-600 lg:text-xl lg:font-bold  hover:text-indigo-600 rounded border border-indigo-700 text-indigo-700 px-4 sm:px-10 py-2 sm:py-4 text-sm'>
+                  Live Demo
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
+        {/* End Home & header */}
 
-      {/* content */}
-      <div className='bg-gray-900 h-screen'>
-        {/* info log in section */}
-        <section className='pb-6 relative block '>
-          <div className='container mx-auto px-4 lg:pt-24 lg:pb-7'>
-            <div className='flex flex-wrap text-center justify-center'>
-              <div className='w-full lg:w-6/12 px-4'>
-                <h2 className='text-4xl font-semibold text-white'>
-                  Storek Inventroy mangmant
-                </h2>
-                <p className='text-lg leading-relaxed mt-4 mb-4 text-gray-300'>
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
+
+        {/* Features */}
+        <div>
+          <section className='max-w-8xl mx-auto container bg-white pt-16'>
+            <div>
+              <div
+                role='contentinfo'
+                className='flex items-center flex-col px-4'
+              >
+                <p
+                  className='focus:outline-none uppercase text-sm text-center text-gray-600 leading-4 border-b-2 pb-1 border-blue-200'
+                >
+                  in few easy steps
                 </p>
+                <h1
+                  className='focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4'
+                >
+                  Create Beautiful Landing Pages &amp; Web Apps in a Jiffy
+                </h1>
+              </div>
+              <div
+                aria-label='group of cards'
+                className='focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4'
+              >
+                <div
+                  aria-label='card 1'
+                  className='focus:outline-none flex sm:w-full md:w-5/12 pb-20'
+                >
+                  <div className='w-20 h-20 relative mr-5'>
+                    <div className='absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1' />
+                    <div className='absolute text-white bottom-0 left-0 bg-blue-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3'>
+                      <img
+                        src='https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG1.svg'
+                        alt='drawer'
+                      />
+                    </div>
+                  </div>
+                  <div className='w-10/12'>
+                    <h2
+                      className='focus:outline-none text-lg font-bold leading-tight text-gray-800'
+                    >
+                      Ready to use components
+                    </h2>
+                    <p
+                      className='focus:outline-none text-base text-gray-600 leading-normal pt-2'
+                    >
+                      It provides a very simple start, no need to write a lot of
+                      code, you just import it and start the primitive
+                      components and create the ones you need.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  aria-label='card 2'
+                  className='focus:outline-none flex sm:w-full md:w-5/12 pb-20'
+                >
+                  <div className='w-20 h-20 relative mr-5'>
+                    <div className='absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1' />
+                    <div className='absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3'>
+                      <img
+                        src='https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG2.svg'
+                        alt='check'
+                      />
+                    </div>
+                  </div>
+                  <div className='w-10/12'>
+                    <h2
+                      className='focus:outline-none text-lg font-semibold leading-tight text-gray-800'
+                    >
+                      Hight Quality UI you can reply on
+                    </h2>
+                    <p
+                      className='focus:outline-none text-base text-gray-600 leading-normal pt-2'
+                    >
+                      Modify the visual appearance of your site – including
+                      colors, fonts, margins and other style-related properties
+                      – with a sophisticated style.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  aria-label='card 3'
+                  className='focus:outline-none flex sm:w-full md:w-5/12 pb-20'
+                >
+                  <div className='w-20 h-20 relative mr-5'>
+                    <div className='absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1' />
+                    <div className='absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3'>
+                      <img
+                        src='https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG3.svg'
+                        alt='html tag'
+                      />
+                    </div>
+                  </div>
+                  <div className='w-10/12'>
+                    <h2
+                      className='focus:outline-none text-lg font-semibold leading-tight text-gray-800'
+                    >
+                      Coded by Developers for Developers
+                    </h2>
+                    <p
+                      className='focus:outline-none text-base text-gray-600 leading-normal pt-2'
+                    >
+                      Instead of just giving you the tools to create your own
+                      site, they offer you a list of themes you can choose from.
+                      Thus a handy product.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  aria-label='card 4'
+                  className='focus:outline-none flex sm:w-full md:w-5/12 pb-20'
+                >
+                  <div className='w-20 h-20 relative mr-5'>
+                    <div className='absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1' />
+                    <div className='absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3'>
+                      <img
+                        src='https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG4.svg'
+                        alt='monitor'
+                      />
+                    </div>
+                  </div>
+                  <div className='w-10/12'>
+                    <h2
+                      className='focus:outline-none text-lg font-semibold leading-tight text-gray-800'
+                    >
+                      The Last UI kit you’ll ever need
+                    </h2>
+                    <p
+                      className='focus:outline-none text-base text-gray-600 leading-normal pt-2'
+                    >
+                      We have chosen the bright color palettes that arouse the
+                      only positive emotions. The kit that simply assures to be
+                      loved by everyone.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* three elemen */}
-            <div className=' flex flex-wrap mt-24 justify-center'>
-              <div className='w-full lg:w-3/12 px-4 text-center'>
-                <div className='text-gray-300 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center'>
-                  <i className='fas fa-medal text-xl'></i>
-                </div>
-                <h6 className='text-xl mt-5 font-semibold text-white'>
-                  Excelent Services
-                </h6>
-                <p className='mt-2 mb-4 text-gray-300'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className='w-full lg:w-3/12 px-4 text-center'>
-                <div className='text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center'>
-                  <i className='fas fa-poll text-xl'></i>
-                </div>
-                <h5 className='text-xl mt-5 font-semibold text-white'>
-                  Grow your market
-                </h5>
-                <p className='mt-2 mb-4 text-gray-400'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className='w-full lg:w-3/12 px-4 text-center'>
-                <div className='text-gray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center'>
-                  {/* <i className="fas fa-lightbulb text-xl"></i> */}
-                </div>
-                <h5 className='text-xl mt-5 font-semibold text-white'>
-                  Launch time
-                </h5>
-                <p className='mt-2 mb-4 text-gray-300'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <FormLogin/>
-    </div>
-
-   
+          </section>
+        </div>
+   </div>
+    </>
   );
-};
+}
 
-export default FormLogin;
+export default Page;
