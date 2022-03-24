@@ -3,14 +3,14 @@ import React from 'react'
 const Featuers = () => {
   return (
     <> 
-    <div>
-      <section className='max-w-8xl mx-auto my-18 container bg-gray-100 pt-16'>
+    <div className=' h-screen mb-32 max-w-8xl mx-auto mt-20 container  pt-16'id='features'>
+      <section >
         <div>
           <div className='flex items-center flex-col px-4'>
             <p className='focus:outline-none uppercase text-sm text-center text-gray-600 leading-4 border-b-2 pb-1 border-blue-200'>
               in few easy steps
             </p>
-            <h1 className='focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4'>
+            <h1 className='focus:outline-none text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4'>
               Create Beautiful Landing Pages &amp; Web Apps in a Jiffy
             </h1>
           </div>

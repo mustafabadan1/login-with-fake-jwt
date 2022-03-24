@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import Contact from './Contact';
 import Featuers from './Featuers';
 import HomeLogin from './HomeLogin';
+import Login from './Login';
 import NavbarLogin from './NavbarLogin';
 
 function Page() {
   return (
     <>
       <div
-        className=' pb-12 overflow-y-hidden bg-gray-100'
-        style={{ minHeight: 800 }}
+        className='   overflow-y-hidden bg-gray-100'
+      
       >
         {/* Navbar */}
         <NavbarLogin />
         {/* Navbar */}
 
         {/* Home */}
-        <HomeLogin />
+      
         {/* End Home & header */}
 
         {/* Features */}
@@ -27,6 +28,12 @@ function Page() {
          {/* Contact */}
          <Contact/>
          {/* end contact */}
+
+
+         {/* Login form */}
+         <Login/>
+         {/* End Login form */}
+
 
       </div>
     </>

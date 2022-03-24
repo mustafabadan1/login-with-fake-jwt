@@ -46,7 +46,7 @@ const Login = ({ setLogoutUser }) => {
   };
 
   return (
-    <form autoComplete='off' onSubmit={login}>
+    <form autoComplete='off' onSubmit={login} id='login'>
 
       <section className='flex justify-center items-center h-screen bg-gray-100'>
         <div className='max-w-md w-full bg-white rounded p-6 space-y-4'>
